@@ -14,10 +14,10 @@ function Service({}: Props) {
         <h1>Сервис</h1>
         <h4>От идеи до незабываемого и измеримого результата.</h4>
         <hr />
-        <span>
+        <p>
           Интеграция безупречного производства, передовых технологий и тщательного измерения
           производительности
-        </span>
+        </p>
       </div>
       <div className={styles.cards}>
         {cardsData.map((item: CardDescription) => {

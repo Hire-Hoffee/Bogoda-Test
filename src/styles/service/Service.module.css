@@ -14,15 +14,19 @@
 }
 
 section {
-  display: flex;
-  column-gap: 88px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 88px;
   padding: 79px 40px 16px 62px;
   font-family: "Roboto", sans-serif;
   color: var(--grey);
 }
 
 .description {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .description h1 {
@@ -47,10 +51,73 @@ hr {
 }
 
 .cards {
-  flex: 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 80px;
+  justify-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    padding: 10px;
+    align-content: center;
+  }
+
+  .description {
+    margin: 52px 122px 28px 46px;
+  }
+
+  .description h1 {
+    text-align: center;
+  }
+
+  .description p {
+    width: 500px;
+  }
+
+  .cards {
+    padding-top: 77px;
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .description p {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .description {
+    margin: auto
+  }
+
+  .description,
+  h1,
+  p,
+  hr {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .description,
+  h1,
+  p,
+  hr {
+    align-items: center;
+    text-align: center;
+  }
 }
