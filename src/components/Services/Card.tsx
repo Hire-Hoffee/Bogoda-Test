@@ -1,16 +1,21 @@
-import { useState } from "react";
 import styles from "@/styles/service/Card.module.css";
-import type { CardDescription } from "@/types";
 
-function Card({ title, text, img }: CardDescription) {
+import type { CardType } from "@/types";
+import { useLazyGetPostQuery } from "@/api/fetchData";
+
+function Card({ id, title, text, img }: CardType) {
+  const [fetchData, { data, isLoading }] = useLazyGetPostQuery();
+
   return (
     <div className={styles.card}>
       <img src={`${img}.png`} alt="icon" />
       <h5>{title || "UNDEFINED"}</h5>
 
+      {data && <p>{data.body}</p>}
+
       <div className={styles.info}>
         <p>{text || "UNDEFINED"}</p>
-        <button>ПОДРОБНЕЕ →</button>
+        <button onClick={() => fetchData(id)}>ПОДРОБНЕЕ →</button>
       </div>
     </div>
   );
