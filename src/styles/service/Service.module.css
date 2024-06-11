@@ -15,12 +15,15 @@
 
 section {
   display: flex;
+  column-gap: 88px;
   padding: 79px 40px 16px 62px;
   font-family: "Roboto", sans-serif;
   color: var(--grey);
 }
 
-.description {}
+.description {
+  flex: 1;
+}
 
 .description h1 {
   color: var(--blue);
@@ -41,4 +44,13 @@ hr {
   width: 100px;
   height: 8px;
   margin: 30px 0px 30px 0px;
+}
+
+.cards {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 80px;
 }
