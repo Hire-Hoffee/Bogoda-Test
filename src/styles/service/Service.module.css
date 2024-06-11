@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "RobotoCondensed";
-  src: url("../assets/fonts/RobotoCondensedRegular.ttf");
+  src: url("/fonts/RobotoCondensedRegular.ttf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/fonts/RobotoRegular.ttf");
+  src: url("/fonts/RobotoRegular.ttf");
 }
 
 section {
