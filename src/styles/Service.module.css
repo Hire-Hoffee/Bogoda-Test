@@ -1,0 +1,44 @@
+:root {
+  --blue: #2B4074;
+  --grey: #4A4A4A;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url("../assets/fonts/RobotoCondensedRegular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/RobotoRegular.ttf");
+}
+
+section {
+  display: flex;
+  padding: 79px 40px 16px 62px;
+  font-family: "Roboto", sans-serif;
+  color: var(--grey);
+}
+
+.description {}
+
+.description h1 {
+  color: var(--blue);
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 65px;
+}
+
+.description h4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+hr {
+  background-color: var(--blue);
+  width: 100px;
+  height: 8px;
+  margin: 30px 0px 30px 0px;
+}

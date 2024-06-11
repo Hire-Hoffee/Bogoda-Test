@@ -1,10 +1,10 @@
-import { useState } from "react";
+import Service from "./components/Service";
 
 function App() {
   return (
-    <div>
-      <h1>Hello Vite + React</h1>
-    </div>
+    <main>
+      <Service />
+    </main>
   );
 }
 
